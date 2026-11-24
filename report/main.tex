@@ -21,7 +21,7 @@
 \maketitle
 
 \begin{abstract}
-We train an unconditional DDPM on 5,179 RGB histopathology images from the assigned Kaggle dataset. A 128$\times$128 U-Net uses a cosine schedule, EMA, and RGB covariance whitening estimated from 128 training images. We select the epoch-25 EMA checkpoint using a fixed-seed color diagnostic. On 5,000 generated and 5,000 training images, it obtains an Inception Score (IS) of 2.335 and an Ignite FID of 0.0618. Since the real reference is not held out, these scores are descriptive.
+We train an unconditional DDPM on 5,179 RGB histopathology images from the assigned Kaggle dataset. A 128$\times$128 U-Net uses a cosine schedule, EMA, and RGB covariance whitening estimated from 128 training images. We select the epoch-25 EMA checkpoint using a fixed-seed color diagnostic. On 5,000 generated images and a 5,000-image real subset of the training collection, it obtains an Inception Score (IS) of 2.335 and an Ignite FID of 0.0618. Since the real reference is not held out, these scores are descriptive.
 \end{abstract}
 
 \section{Data and method}

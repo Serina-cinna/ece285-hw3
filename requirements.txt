@@ -1,0 +1,6 @@
+torch
+torchvision
+pytorch-ignite==0.5.4
+numpy>=1.26
+Pillow>=9.5
+scipy>=1.11

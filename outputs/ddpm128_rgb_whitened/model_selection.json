@@ -1,0 +1,35 @@
+{
+  "selected_checkpoint_epoch": 25,
+  "seed": 143,
+  "sampling_steps": 50,
+  "color_reference_count": 128,
+  "selection_basis": "closest per-channel mean RGB to a 128-image real reference sample, with clipping fraction also considered",
+  "selected_metrics": {
+    "epoch": 25,
+    "mean_rgb_0_255": [
+      194.69,
+      144.59,
+      176.05
+    ],
+    "fraction_rgb_values_clipped": 0.005712,
+    "rgb_mean_rmse_to_128_real_sample": 4.801
+  },
+  "other_checkpoints": [
+    {
+      "epoch": 50,
+      "rgb_mean_rmse": 13.074,
+      "clipped_fraction": 0.072673
+    },
+    {
+      "epoch": 75,
+      "rgb_mean_rmse": 14.555,
+      "clipped_fraction": 0.111149
+    },
+    {
+      "epoch": 100,
+      "rgb_mean_rmse": 28.816,
+      "clipped_fraction": 0.108512
+    }
+  ],
+  "limitation": "Diagnostic color-selection criterion only; not an independent validation score."
+}

@@ -1,0 +1,14 @@
+{
+  "checkpoint_epoch": 25,
+  "dataset": "Kaggle rushilprajapati/data-final, Histopathology subset",
+  "real_images": 5000,
+  "generated_images": 5000,
+  "real_reference": "deterministic subset of the training collection; not an independent test split",
+  "resolution": 128,
+  "ddim_sampling_steps": 50,
+  "metric": "PyTorch-Ignite default Inception-v3 FID and Inception Score",
+  "fid": 0.06176595782439964,
+  "inception_score": 2.334634945292406,
+  "inception_score_std": null,
+  "seed": 2026
+}

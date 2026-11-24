@@ -54,6 +54,7 @@ Training loss decreases from 0.536 at epoch 1 to 0.0696 at epoch 25 and 0.0608 a
 
 Figure~\ref{fig:results} shows the loss history and sixteen selected-checkpoint samples. They capture varied stain colors and tissue-like textures, but remain smooth and sometimes blotchy, with limited fine cellular detail.
 
+\pagebreak
 We compare 5,000 generated images with a deterministic 5,000-image subset of the training collection using PyTorch-Ignite's IS and default FID \citep{ignite}. This is not a held-out test. Ignite's FID uses 1,000-dimensional Inception logits, so it is implementation-specific and not directly comparable with the common 2,048-dimensional pool-feature FID.
 
 \begin{table}[H]

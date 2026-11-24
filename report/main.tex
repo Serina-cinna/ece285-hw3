@@ -40,8 +40,8 @@ Setting & Value \\
 \midrule
 Images / resolution / U-Net & 5,179 / $128\times128$ RGB / 64 channels \\
 Batch size / epochs & 32 / 100 \\
-Optimizer & AdamW, learning rate $2\times10^{-4}$ \\
-Schedule / objective & Cosine, 1,000 steps / noise MSE \\
+Optimizer / LR & AdamW; peak $2\times10^{-4}$, 500-step warm-up + cosine decay \\
+Diffusion / objective & Cosine, 1,000 steps / noise-prediction MSE \\
 EMA decay / color & 0.999 / RGB whitening, clip $\pm1.5$ \\
 Sampling / hardware & DDIM, 50 steps / RTX 3090 \\
 Seed & 43 \\
@@ -50,7 +50,7 @@ Seed & 43 \\
 \end{table}
 
 \section{Results}
-Training loss decreases from 0.536 at epoch 1 to 0.0696 at epoch 25 and 0.0608 at epoch 100. We select epoch 25: among the compared checkpoints, it has the closest fixed-seed RGB mean to a 128-image training reference and the least clipping. This diagnostic is only a selection aid, not independent validation.
+Training loss falls from 0.536 at epoch 1 to 0.0696 at epoch 25 and 0.0608 at epoch 100. After the early drop, it fluctuates near 0.06--0.07 and changes slowly, suggesting a late-training plateau rather than strict convergence. We select epoch 25: among the compared checkpoints, it has the closest fixed-seed RGB mean to a 128-image training reference and the least clipping. This diagnostic is only a selection aid, not independent validation.
 
 Figure~\ref{fig:results} shows the loss history and sixteen selected-checkpoint samples. They capture varied stain colors and tissue-like textures, but remain smooth and sometimes blotchy, with limited fine cellular detail.
 
